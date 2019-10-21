@@ -11,6 +11,6 @@ public class HelloWorld {
 	public ModelAndView helloWorld() {
  
 		String message = "Hello, world!";
-		return new ModelAndView("welcome", "message", message);
-	}
+		return new ModelAndView("welcome", "message", message);	} //il primo "message" è il nome dell'oggetto e il secondo message è l'oggetto
+																//il "welcome" dove va l'oggetto
 }
