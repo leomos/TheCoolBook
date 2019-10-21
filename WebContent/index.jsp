@@ -14,7 +14,7 @@
 		</h3>
 		
 		<h3>
-			<a href="books.html">Click here to See Our Library... </a>
+			<a href="books.html">Click here to See Our Library </a>
 		</h3>
 		
 	</div>
