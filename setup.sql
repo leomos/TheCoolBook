@@ -6,10 +6,10 @@
 --alter user pippo quota unlimited on users;
 --exit
 
---drop table events;
 drop table book_author;
 drop table book_event;
 drop table author_event;
+drop table events;
 drop table books;
 drop table authors;
 --drop sequence authors_seq;
@@ -28,19 +28,26 @@ create table authors (
     first_name varchar2(30) not null,
     last_name varchar2(30) not null,
     birth_date date not null,
-    birth_place varchar2(30) not null);  
+    birth_place varchar2(30) not null);
+    
+create table events(    
+     event_id integer primary key, 
+     event_name varchar2(20)not null,
+     place varchar2(30 )not null,
+     day_event date not null,
+     start_time date not null);
   
 create table book_author (
     book_id integer references books(book_id),
     author_id integer references authors(author_id));
      
 create table book_event (
-   book_id integer references books(book_id));
-   --event_id integer references events(event_id));
+   book_id integer references books(book_id),
+   event_id integer references events(event_id));
     
 create table author_event (
-   author_id integer references authors(author_id));
-   ---event_id integer references events(event_id));
+   author_id integer references authors(author_id),
+   event_id integer references events(event_id));
        
 --create sequence book_seq start with 101;
 --create sequence authors_seq start with 101;     
@@ -64,6 +71,6 @@ create table author_event (
 --insert into authors values (authors_seq.nextval, 'Primo', 'Levi', '31-LUG-1919', 'Torino');
 --insert into authors values (authors_seq.nextval, 'Eugenio', 'Montale', '12-OTT-1896', 'Genova');
 --insert into authors values (authors_seq.nextval, 'Salvatore', 'Quasimodo', '20-AGO-1901', 'Modica');
-  
-     
+
 commit;
+     
