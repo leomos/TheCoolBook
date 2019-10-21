@@ -32,8 +32,8 @@ create table authors (
     
 create table events(    
      event_id integer primary key, 
-     event_name varchar2(20)not null,
-     place varchar2(30 )not null,
+     event_name varchar2(20) not null,
+     place varchar2(30) not null,
      day_event date not null,
      start_time date not null);
   
