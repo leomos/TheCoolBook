@@ -13,5 +13,8 @@
 			check Spring MVC Controller... @RequestMapping("/welcome"))
 		</h3>
 	</div>
+		<div style="text-align: center">
+			<a href="events.html">Click here to See events... </a>
+		</div>
 </body>
 </html>
