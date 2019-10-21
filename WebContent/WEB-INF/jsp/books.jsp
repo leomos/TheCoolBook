@@ -20,7 +20,7 @@
 
 	<nav class="navbar navbar-light navbar-expand-md">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/TheCoolBook">TheCoolBook</a>
+			<a class="navbar-brand" href="/thecoolbook">TheCoolBook</a>
 			<button data-toggle="collapse" class="navbar-toggler"
 				data-target="#navcol-1">
 				<span class="sr-only">Toggle navigation</span><span
