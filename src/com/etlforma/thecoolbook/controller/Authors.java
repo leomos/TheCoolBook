@@ -7,11 +7,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class Authors {
 
-	@RequestMapping("/author")
+	@RequestMapping("/authors")
 	public ModelAndView authors() {
  
 		String message = "Ecco i tuoi autori";
-		return new ModelAndView("author", "message", message);
+		return new ModelAndView("authors", "message", message);
 	}
 }
 
