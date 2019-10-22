@@ -40,24 +40,15 @@ public class Book {
 		return genre;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getIsbn() {
+		return isbn;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Boolean getIsAdmin() {
-		return isAdmin;
-	}
-
-	public void setIsAdmin(Boolean isAdmin) {
-		this.isAdmin = isAdmin;
-	}
-	
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}	
 }
