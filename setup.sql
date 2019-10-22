@@ -1,5 +1,5 @@
 -- user
-DROP TABLE user;
+DROP TABLE IF EXISTS user;
 
 CREATE TABLE user (
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -19,7 +19,7 @@ INSERT INTO user(email, password, first_name, last_name, is_admin) VALUES (
 );
 
 -- book
-DROP TABLE book;
+DROP TABLE IF EXISTS book;
 
 CREATE TABLE book (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,7 +37,7 @@ INSERT INTO book(title, num_pages, genre, isbn) VALUES (
 );
 
 -- author
-DROP TABLE author;
+DROP TABLE IF EXISTS author;
 
 CREATE TABLE author (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -55,7 +55,7 @@ INSERT INTO author(first_name, last_name, birth_date, birth_place) VALUES (
 );
 
 --event
-DROP TABLE event;
+DROP TABLE IF EXISTS event;
 
 CREATE TABLE event (
      id INT AUTO_INCREMENT PRIMARY KEY,
