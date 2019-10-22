@@ -22,17 +22,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    
 	<c:forEach items="${books}" var="book">
-	
+	<tr>
 	<th scope="row">${book.getTitle()}</th>
 	<td>${book.getNum_pages()}</td>
 	<td>${book.getGenre()}</td>
 	<td>${book.getIsbn()}</td>
-	  
+	</tr>  
 	</c:forEach>
 	  
-	</tr>
+	
 	 </tbody>
 	</table>
 	
