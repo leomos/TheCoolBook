@@ -11,6 +11,8 @@ public class Book {
 	private String genre;
 	
 	private String isbn;
+	
+	private String URLImage;
 
 	public Integer getId() {
 		return id;
@@ -50,5 +52,13 @@ public class Book {
 
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
-	}	
+	}
+	
+	public String getURLImage() {
+		return URLImage; 
+	}
+	
+	public void setURLImage(String URLImage) {
+		this.URLImage = URLImage; 
+	}
 }
