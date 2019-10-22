@@ -22,7 +22,7 @@
 					<li class="nav-item" role="presentation"><a
 						class="nav-link active" href="authors.html">Authors</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="allbooks.html">Books</a></li>
+						href="books.html">Books</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
 						href="events.html">Events</a></li>
 				</ul>

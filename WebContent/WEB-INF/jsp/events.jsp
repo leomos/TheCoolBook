@@ -21,7 +21,7 @@
 					<li class="nav-item" role="presentation"><a
 						class="nav-link active" href="authors.html">Authors</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="allbooks.html">Books</a></li>
+						href="books.html">Books</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
 						href="events.html">Events</a></li>
 				</ul>
@@ -29,10 +29,24 @@
 		</div>
 	</nav>
 	<br>
-	<div style="text-align: center">
-		<h1>Events page</h1>
-		<p>Message from controller: ${message}</p>
-		<a href="index.jsp">Back to index</a>
+	<div class="container">
+	<h3>All Events</h3>
 	</div>
+	<div class="container">
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name Event</th>
+						<th>Author</th>
+						<th>Date Event</th>
+						<th>Location Event</th>
+					</tr>
+				</thead>
+				</table>
+		</div>
+	</div>						
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
 </body>
 </html>

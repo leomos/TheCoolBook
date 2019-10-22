@@ -1,19 +1,12 @@
- 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page import="java.util.List"%>
-<%@ page import="java.text.DateFormat"%>
-<%@ page import="java.text.SimpleDateFormat"%> 
-
-<!DOCTYPE html>
-<html>
+ <html>
 
 <head>
 <meta charset="utf-8">
+<title>All books - TheCoolBook</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<title>All books - TheCoolBook</title>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 <body>
@@ -29,11 +22,11 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav">
 					<li class="nav-item" role="presentation"><a
-						class="nav-link active" href="/TheCoolBook/allAuthors.jsp">Authors</a></li>
+						class="nav-link active" href="authors.html">Authors</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="/TheCoolBook/allBooks.jsp">Books</a></li>
+						href="books.html">Books</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="/TheCoolBook/allEvents.jsp">Events</a></li>
+						href="events.html">Events</a></li>
 				</ul>
 			</div>
 		</div>
@@ -52,8 +45,9 @@
 						<th>Isbn</th>
 					</tr>
 				</thead>
-				<tbody>
-					
+				</table>
+		</div>
+	</div>						
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
 </body>
