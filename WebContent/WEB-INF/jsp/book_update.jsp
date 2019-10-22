@@ -3,7 +3,7 @@
 	<t:navbar></t:navbar>
 	<div class="container">
 		<div class="row">
-			<div class="col-auto"><img class="rounded shadow" src="${book.getURLImage()}" style="width: 150px; height: 150px;" /></div>
+			<div class="col-auto"><img class="rounded shadow" src="${book.getURLImage()}" style="width: 200px; height: 250px;" /></div>
 		    <div class="col">
 		        <div class="row">
 		            <div class="col">
