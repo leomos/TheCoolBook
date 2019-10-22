@@ -4,6 +4,7 @@
 <title>TheCoolBook</title>
 </head>
 <body>
-<h3>${book.getTitle()} ${book.getNum_pages()} ${book.getGenre()} ${book.getIsbn()}</h3>
+<h3>${book.getTitle()} ${book.getNum_pages()} ${book.getGenre()} ${book.getIsbn()}}</h3>
+<img class="rounded shadow" src="${book.getURLImage()}" style="width: 150px; height: 150px;" />
 </body>
 </html>
