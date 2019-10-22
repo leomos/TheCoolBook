@@ -12,8 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.etlforma.thecoolbook.model.Book;
 import com.etlforma.thecoolbook.model.Dao;
-import com.etlforma.thecoolbook.model.User;
-import com.etlforma.thecoolbook.model.UserDao;
 
 @Controller
 public class BookController {
@@ -28,7 +26,6 @@ public class BookController {
 		model.setViewName("book_read");
 
 		return model;
-
 		
 	}
 	
@@ -41,9 +38,14 @@ public class BookController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/book/{id}", method=RequestMethod.GET)
-	public void updateBook(@PathVariable int id) {
-		System.out.println("Request book " + id);
+	@RequestMapping(value = "/book/{id}/update")
+	public ModelAndView updateBook(@PathVariable Integer id, ModelAndView model) {
+		Book book = bookDao.get(id);
+		model.addObject("book", book);
+		//TODO remove the comment once the book_update is added!!
+//		model.setViewName("book_update");
+		
+		return model;
 	}
 	
 }
