@@ -42,8 +42,7 @@ public class BookController {
 	public ModelAndView updateBook(@PathVariable Integer id, ModelAndView model) {
 		Book book = bookDao.get(id);
 		model.addObject("book", book);
-		//TODO remove the comment once the book_update is added!!
-//		model.setViewName("book_update");
+		model.setViewName("book_update");
 		
 		return model;
 	}
