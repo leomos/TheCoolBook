@@ -17,21 +17,21 @@ import com.etlforma.thecoolbook.model.EventDao;
 public class EventController {
 
 	@Autowired
-	private Dao<Event> EventDao;
+	private Dao<Event> eventDao;
 
 	@RequestMapping(value = "/event/read")
 	public ModelAndView readEvent(ModelAndView model) throws IOException {
-		List<Event> Events = EventDao.read();
-		model.addObject("events", Events);
+		List<Event> events = eventDao.read();
+		model.addObject("events", events);
 		model.setViewName("event_read");
 
 		return model;
 	}
 
-	@RequestMapping(value = "/event/{id}")
+	@RequestMapping(value = "/event/{idEvent}")
 	public ModelAndView getEvent(@PathVariable Integer idEvent, ModelAndView model) {
-		Event Event = EventDao.get(idEvent);
-		model.addObject("event", Event);
+		Event event = eventDao.get(idEvent);
+		model.addObject("event", event);
 		model.setViewName("event_get");
 
 		return model;

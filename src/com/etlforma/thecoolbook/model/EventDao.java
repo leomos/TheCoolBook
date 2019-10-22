@@ -24,12 +24,15 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 	@Override
 	public Boolean create(Event entity) {
 		String sql = "INSERT INTO Event(id_event, event_name, event_location, event_date) VALUES (?, ?, ?, ?);";
-		//String sql = "INSERT INTO Event(id_event, id_author, event_name, event_location, event_date) VALUES (?, ?, ?, ?, ?);";
 
 		try {
 
-			int counter = jdbcTemplate.update(sql, new Object[] { entity.getIdEvent() , entity.getIdAuthor(),
-					entity.getEventName(), entity.getEventLocation(), entity.getEventDate() });
+			int counter = jdbcTemplate.update(sql, new Object[] { 
+					entity.getIdEvent(), 
+					entity.getEventName(), 
+					entity.getEventLocation(), 
+					entity.getEventDate() 
+			});
 
 			return counter > 0;
 
@@ -41,24 +44,23 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 
 	@Override
 	public List<Event> read() {
-		List<Event> Events = jdbcTemplate.query("SELECT * FROM Event;", new RowMapper<Event>() {
+		List<Event> events = jdbcTemplate.query("SELECT * FROM event;", new RowMapper<Event>() {
 
 			@Override
 			public Event mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Event Event = new Event();
+				Event event = new Event();
 
-				Event.setIdEvent(rs.getInt("id_event"));
-				//Event.setIdAuthor(rs.getInt("id_author"));
-				Event.setEventName(rs.getString("event_name"));
-				Event.setEventLocation(rs.getString("event_location"));
-				Event.setEventDate(rs.getDate("event_date"));
+				event.setIdEvent(rs.getInt("id_event"));
+				event.setEventName(rs.getString("event_name"));
+				event.setEventLocation(rs.getString("event_location"));
+				event.setEventDate(rs.getDate("event_date"));
 
-				return Event;
+				return event;
 			}
 
 		});
 
-		return Events;
+		return events;
 	}
 
 	@Override
@@ -75,24 +77,23 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 
 	@Override
 	public Event get(Integer idEvent) {
-		List<Event> Events = jdbcTemplate.query("SELECT * FROM Event WHERE id=" + idEvent + ";", new RowMapper<Event>() {
+		List<Event> events = jdbcTemplate.query("SELECT * FROM event WHERE id_event=" + idEvent + ";", new RowMapper<Event>() {
 
 			@Override
 			public Event mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Event Event = new Event();
+				Event event = new Event();
 
-				Event.setIdEvent(rs.getInt("id_event"));
-				//Event.setIdAuthor(rs.getInt("id_author"));
-				Event.setEventName(rs.getString("event_name"));
-				Event.setEventLocation(rs.getString("event_location"));
-				Event.setEventDate(rs.getDate("event_date"));
+				event.setIdEvent(rs.getInt("id_event"));
+				event.setEventName(rs.getString("event_name"));
+				event.setEventLocation(rs.getString("event_location"));
+				event.setEventDate(rs.getDate("event_date"));
 
-				return Event;
+				return event;
 			}
 
 		});
 
-		return Events.get(0);
+		return events.get(0);
 	}
 
 }

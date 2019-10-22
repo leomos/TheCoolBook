@@ -4,6 +4,6 @@
 <title>TheCoolBook</title>
 </head>
 <body>
-<h3>${user.getEventName()} @${user.getEventLocation()}</h3>
+<h3>${event.getEventName()} ${event.getEventLocation()}</h3>
 </body>
 </html>

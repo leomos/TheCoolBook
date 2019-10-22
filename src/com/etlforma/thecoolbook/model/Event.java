@@ -6,8 +6,6 @@ public class Event {
 
 	private Integer idEvent;
 
-	private Integer idAuthor;
-
 	private String eventName;
 
 	private String eventLocation;
@@ -20,14 +18,6 @@ public class Event {
 
 	public void setIdEvent(Integer idEvent) {
 		this.idEvent = idEvent;
-	}
-
-	public Integer getIdAuthor() {
-		return idAuthor;
-	}
-
-	public void setIdAuthor(Integer idAuthor) {
-		this.idAuthor = idAuthor;
 	}
 
 	public String getEventName() {

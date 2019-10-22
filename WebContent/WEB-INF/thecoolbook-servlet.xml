@@ -27,7 +27,7 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://192.168.20.64:3306/thecoolbook" />
+		<property name="url" value="jdbc:mysql://192.168.20.64:3306/thecoolbook_with_fks" />
 		<property name="username" value="root" />
 		<property name="password" value="root" />
 	</bean>
@@ -37,6 +37,10 @@
 	</bean>
  
  	<bean id="userDao" class="com.etlforma.thecoolbook.model.UserDao">  
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>  
+	</bean>
+	
+	<bean id="eventDao" class="com.etlforma.thecoolbook.model.EventDao">  
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>  
 	</bean>
 </beans>
