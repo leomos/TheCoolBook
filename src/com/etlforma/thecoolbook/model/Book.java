@@ -6,7 +6,7 @@ public class Book {
 	
 	private String title;
 	
-	private Integer num_pages;
+	private Integer numPages;
 	
 	private String genre;
 	
@@ -28,12 +28,12 @@ public class Book {
 		this.title = title;
 	}
 
-	public Integer getNum_pages() {
-		return num_pages;
+	public Integer getNumPages() {
+		return numPages;
 	}
 
-	public void setNum_pages(Integer num_pages) {
-		this.num_pages = num_pages;
+	public void setNumPages(Integer numPages) {
+		this.numPages = numPages;
 	}
 
 	public String getGenre() {

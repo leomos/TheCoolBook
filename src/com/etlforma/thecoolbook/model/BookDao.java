@@ -30,7 +30,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 			
 			int counter = jdbcTemplate.update(sql, new Object[] {
 					book.getTitle(),
-					book.getNum_pages(), 
+					book.getNumPages(), 
 					book.getGenre(),
 					book.getIsbn()
 			});
@@ -52,7 +52,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 				Book book = new Book();
 				book.setId(rs.getInt("id"));
 				book.setTitle(rs.getString("title"));
-				book.setNum_pages(rs.getInt("num_pages"));
+				book.setNumPages(rs.getInt("num_pages"));
 				book.setGenre(rs.getString("genre"));
 				book.setIsbn(rs.getString("isbn"));
 				return book;
@@ -71,7 +71,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 			
 			int counter = jdbcTemplate.update(sql, new Object[] {
 					book.getTitle(),
-					book.getNum_pages(), 
+					book.getNumPages(), 
 					book.getGenre(),
 					book.getIsbn(),
 					book.getId()
@@ -110,7 +110,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 				Book book = new Book();
 				book.setId(rs.getInt("id"));
 				book.setTitle(rs.getString("title"));
-				book.setNum_pages(rs.getInt("num_pages"));
+				book.setNumPages(rs.getInt("num_pages"));
 				book.setGenre(rs.getString("genre"));
 				book.setIsbn(rs.getString("isbn"));
 				return book;
