@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class Events {
 
 	@RequestMapping("/events")
-	public ModelAndView helloWorld() {
+	public ModelAndView events() {
  
 		String message = "Hello, events!";
 		return new ModelAndView("events", "message", message);	} //il primo "message" è il nome dell'oggetto e il secondo message è l'oggetto

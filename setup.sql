@@ -58,10 +58,11 @@ INSERT INTO author(first_name, last_name, birth_date, birth_place) VALUES (
 DROP TABLE IF EXISTS event;
 
 CREATE TABLE event (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     name VARCHAR(255) NOT NULL,
-     place VARCHAR(50) NOT NULL,
-     datetime DATETIME NOT NULL
+     id_event INT AUTO_INCREMENT PRIMARY KEY,
+     --id_author INT,
+     event_name VARCHAR(255) NOT NULL,
+     event_location VARCHAR(50) NOT NULL,
+     event_date DATETIME NOT NULL
 );
 
 INSERT INTO event(name, place, datetime) VALUES (
