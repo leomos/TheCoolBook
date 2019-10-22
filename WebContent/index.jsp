@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
 	<nav class="navbar navbar-light navbar-expand-md">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.jsp">TheCoolBook</a>
