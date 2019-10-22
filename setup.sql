@@ -54,20 +54,33 @@ INSERT INTO author(first_name, last_name, birth_date, birth_place) VALUES (
 	'Bloemfontein, South Africa'
 );
 
---event
+-- event
 DROP TABLE IF EXISTS event;
 
 CREATE TABLE event (
      id_event INT AUTO_INCREMENT PRIMARY KEY,
-     --id_author INT,
      event_name VARCHAR(255) NOT NULL,
      event_location VARCHAR(50) NOT NULL,
      event_date DATETIME NOT NULL
 );
 
-INSERT INTO event(name, place, datetime) VALUES (
+INSERT INTO event(event_name, event_location, event_date) VALUES (
 	'ISdA',
 	'OverNet',
 	'2019-10-25 12:00:00'
 );
 
+-- eventauthor
+DROP TABLE IF EXISTS eventauthor;
+
+CREATE TABLE eventauthor (
+     id_event INT NOT NULL,
+     id_author INT NOT NULL,
+     FOREIGN KEY (id_event) REFERENCES event(id_event),
+     FOREIGN KEY (id_author) REFERENCES author(id)
+);
+
+INSERT INTO eventauthor( id_event, id_author) VALUES (
+	1,
+    1
+);
