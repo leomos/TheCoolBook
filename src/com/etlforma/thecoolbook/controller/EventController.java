@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.etlforma.thecoolbook.model.Dao;
@@ -36,5 +37,20 @@ public class EventController {
 
 		return model;
 	}
+	
+	@RequestMapping(value = "/event/{idEvent}", method=RequestMethod.GET)
+	public void updateEvent(@PathVariable int idEvent) {
+		System.out.println("Request book " + idEvent);
+	}
+	
+//	@RequestMapping(value = "/event/created")
+//	public ModelAndView createEvent(@PathVariable Event created, ModelAndView model) {
+//		Boolean createdOrNot = eventDao.create(created);
+//		model.addObject("created", createdOrNot);
+//		model.setViewName("event_created");
+//
+//		return model;
+//	}
+//	
 
 }
