@@ -64,9 +64,23 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 	}
 
 	@Override
-	public Boolean update(Event entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public Boolean update(Event event) {
+		String sql = "UPDATE event SET event_name=?, event_location=?, event_date=?;";
+	    
+            try {
+			
+			int counter = jdbcTemplate.update(sql, new Object[] {
+					event.getEventName(),
+					event.getEventLocation(), 
+					event.getEventDate()
+			});
+			
+			return counter > 0;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Override

@@ -1,11 +1,14 @@
 package com.etlforma.thecoolbook.controller;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -37,10 +40,38 @@ public class EventController {
 
 		return model;
 	}
+
 	
-	@RequestMapping(value = "/event/{idEvent}", method=RequestMethod.GET)
-	public void updateEvent(@PathVariable int idEvent) {
-		System.out.println("Request book " + idEvent);
+	@RequestMapping(value = "/event/{idEvent}/update", method=RequestMethod.GET)
+	public ModelAndView updateWhichEvent(@PathVariable Integer idEvent, ModelAndView model) {
+		Event eventToUpdate = eventDao.get(idEvent);
+		model.addObject("eventToUpdate", eventToUpdate);
+		model.setViewName("event_update");
+
+		return model;
+	}
+	
+//	@RequestMapping(value = "/event/{idEvent}/update", method=RequestMethod.POST)
+//	public ModelAndView grabDataToUpdate(@PathVariable Integer idEvent, @RequestBody String eventName, @RequestBody String eventLocation, @RequestBody Date eventDate, ModelAndView model) {
+//		System.out.println(eventName);
+//		
+//		Event eventToUpdate = eventDao.get(idEvent);
+//		model.addObject("eventToUpdate", eventToUpdate);
+//		model.setViewName("event_update");
+//
+//		return model;
+//	}
+	
+	@RequestMapping(value = "/event/{idEvent}/updated", method=RequestMethod.GET)
+	public ModelAndView getUpdateOrNot(@PathVariable Integer idEvent, ModelAndView model) {
+		Event event = eventDao.get(idEvent);
+		Boolean up = eventDao.update(event);
+		int id = event.getIdEvent();
+		model.addObject("up", up);
+		model.addObject("id", id);
+		model.setViewName("event_updated");
+
+		return model;
 	}
 	
 //	@RequestMapping(value = "/event/created")
