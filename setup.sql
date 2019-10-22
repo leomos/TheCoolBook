@@ -71,16 +71,16 @@ INSERT INTO event(event_name, event_location, event_date) VALUES (
 );
 
 -- eventauthor
-DROP TABLE IF EXISTS eventauthor;
+DROP TABLE IF EXISTS eventbook;
 
-CREATE TABLE eventauthor (
+CREATE TABLE eventbook (
      id_event INT NOT NULL,
-     id_author INT NOT NULL,
+     id_book INT NOT NULL,
      FOREIGN KEY (id_event) REFERENCES event(id_event),
-     FOREIGN KEY (id_author) REFERENCES author(id)
+     FOREIGN KEY (id_book) REFERENCES book(id)
 );
 
-INSERT INTO eventauthor( id_event, id_author) VALUES (
+INSERT INTO eventbook( id_event, id_book) VALUES (
 	1,
     1
 );
