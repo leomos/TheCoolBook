@@ -26,12 +26,19 @@ public class BookController {
 	public ModelAndView readBook(ModelAndView model) throws IOException {
 		List<Book> books = bookDao.read();
 		model.addObject("books", books);
-		model.setViewName("book_read");
+		model.setViewName("book_read");//nome del file jsp senza estensione
+
 
 		return model;
 
 	}
 
+	@RequestMapping(value = "/book/create", method = RequestMethod.POST)
+	public String createBook(@ModelAttribute Book book) {
+		bookDao.update(book);
+		return "book_create";
+	}
+	
 	@RequestMapping(value = "/book/{id}")
 	public ModelAndView getBook(@PathVariable Integer id, ModelAndView model) {
 		Book book = bookDao.get(id);
@@ -45,7 +52,7 @@ public class BookController {
 	public ModelAndView updateBook(@PathVariable Integer id, ModelAndView model) {
 		Book book = bookDao.get(id);
 		model.addObject("book", book);
-		model.setViewName("book_update");
+		model.setViewName("book_update");//nome del file jsp senza estensione
 
 		return model;
 	}
