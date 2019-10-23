@@ -5,6 +5,6 @@
 </head>
 <body>
 <h3>${book.getTitle()} ${book.getNumPages()} ${book.getGenre()} ${book.getIsbn()} ${book.getURLImage()}}</h3>
-<img class="rounded shadow" src="${book.getURLImage()}" style="width: 150px; height: 150px;" />
+<img class="rounded shadow" src="${book.getURLImage()}" style="width: 200px; height: 250px;" />
 </body>
 </html>
