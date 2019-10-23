@@ -70,7 +70,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 		String sql = "UPDATE book SET title=?, num_pages=?, genre=?, isbn=?, URLimage=? WHERE id=?;";
 	    
             try {
-			
+			//
 			int counter = jdbcTemplate.update(sql, new Object[] {
 					book.getTitle(),
 					book.getNumPages(), 
