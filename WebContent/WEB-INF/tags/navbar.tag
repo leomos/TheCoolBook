@@ -9,12 +9,15 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navcol-1">
 			<ul class="nav navbar-nav">
-				<li class="nav-item" role="presentation"><a class="nav-link"
-					href="authors.html">Authors</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link"
-					href="allbooks.html">Books</a></li>
-				<li class="nav-item" role="presentation"><a class="nav-link"
-					href="events.html">Events</a></li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" href="authors.html">Authors</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" href="allbooks.html">Books</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" href="events.html">Events</a>
+				</li>
 			</ul>
 		</div>
 	</div>

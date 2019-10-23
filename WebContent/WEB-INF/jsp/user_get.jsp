@@ -1,9 +1,7 @@
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-<title>TheCoolBook</title>
-</head>
-<body>
-<h3>${user.getFirstName()} ${user.getLastName()}</h3>
-</body>
-</html>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<t:page>
+	<t:navbar></t:navbar>
+	<div class="container">
+		<h3>${user.getFirstName()} ${user.getLastName()}</h3>
+	</div>
+</t:page>
