@@ -14,10 +14,10 @@ import com.etlforma.thecoolbook.model.Author;
 
 @Controller
 public class AuthorController {
-	
+
 	@Autowired
 	private Dao<Author> authorDao;
-	
+
 	@RequestMapping(value = "/author/read")
 	public ModelAndView readAuthor(ModelAndView model) throws IOException {
 		List<Author> authors = authorDao.read();
@@ -26,14 +26,25 @@ public class AuthorController {
 
 		return model;
 	}
-	
+
 	@RequestMapping(value = "/author/{id}")
 	public ModelAndView getAuthor(@PathVariable Integer id, ModelAndView model) {
 		Author author = authorDao.get(id);
 		model.addObject("author", author);
 		model.setViewName("author_get");
-		
+
 		return model;
 	}
-	
+
+	@RequestMapping(value = "/author/{id}/update")
+
+	public ModelAndView updateAuthor(@PathVariable Integer id, ModelAndView model) {
+		Author author = authorDao.get(id);
+		model.addObject("author", author);
+		model.setViewName("author_update");
+
+		return model;
+
+	}
+
 }

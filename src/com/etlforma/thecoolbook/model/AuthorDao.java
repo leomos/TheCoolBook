@@ -24,7 +24,7 @@ public class AuthorDao implements Dao<Author>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean create(Author author) {
-		String sql = "INSERT INTO author(first_name, last_name, birth_date, birth_place) VALUES (?, ?, ?, ?);";
+		String sql = "INSERT INTO author(first_name, last_name, birth_date, birth_place, image) VALUES (?, ?, ?, ?, ?);";
 
 		try {
 
@@ -32,7 +32,8 @@ public class AuthorDao implements Dao<Author>, JdbcTemplateInterface {
 					author.getFirstName(), 
 					author.getLastName(),
 					author.getBirthDay(), 
-					author.getBirthPlace()
+					author.getBirthPlace(),
+					author.getImage()
 					});
 
 			return counter > 0;
@@ -56,6 +57,7 @@ public class AuthorDao implements Dao<Author>, JdbcTemplateInterface {
 				author.setLastName(rs.getString("last_name"));
 				author.setBirthDay(rs.getString("birth_date"));
 				author.setBirthPlace(rs.getString("birth_place"));
+				author.setImage(rs.getString("image"));
 
 				return author;
 			}
@@ -67,7 +69,7 @@ public class AuthorDao implements Dao<Author>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean update(Author author) {
-		String sql = "UPDATE author SET first_name=?, last_name=?, birth_date=?, birth_place=? WHERE id=?;";
+		String sql = "UPDATE author SET first_name=?, last_name=?, birth_date=?, birth_place=?, image=? WHERE id=?;";
 		try {
 			int counter = jdbcTemplate.update(sql, new Object[] {
 
@@ -75,6 +77,7 @@ public class AuthorDao implements Dao<Author>, JdbcTemplateInterface {
 					author.getLastName(), 
 					author.getBirthDay(),
 					author.getBirthPlace(),
+					author.getImage(),
 					author.getId() 
 					});
 			return counter > 0;
@@ -113,6 +116,7 @@ public class AuthorDao implements Dao<Author>, JdbcTemplateInterface {
 				author.setLastName(rs.getString("last_name"));
 				author.setBirthDay(rs.getString("birth_date"));
 				author.setBirthPlace(rs.getString("birth_place"));
+				author.setImage(rs.getString("image"));
 
 				return author;
 			}

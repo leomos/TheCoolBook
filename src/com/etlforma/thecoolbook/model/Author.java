@@ -12,7 +12,8 @@ public class Author {
 	
 	private String birthPlace;
 	
-
+	private String image;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -53,6 +54,13 @@ public class Author {
 	public void setBirthPlace(String birthPlace) {
 		this.birthPlace = birthPlace;
 	}
-
 	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 }
