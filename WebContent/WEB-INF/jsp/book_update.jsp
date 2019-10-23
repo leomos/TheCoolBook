@@ -16,7 +16,7 @@
 						<form action="update.html" method="post">
 							<div class="form-group">
 								<label for="title-input">Title:</label> <input type="text"
-									class="form-control" id="title-input" name="title"
+									id="title-input" class="form-control" name="title"
 									value="${book.getTitle()}" />
 							</div>
 							<div class="form-group">

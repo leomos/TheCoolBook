@@ -76,8 +76,8 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 					book.getNumPages(), 
 					book.getGenre(),
 					book.getIsbn(),
-					book.getId(),
-					book.getURLImage()
+					book.getURLImage(),
+					book.getId()
 			});
 			
 			return counter > 0;
