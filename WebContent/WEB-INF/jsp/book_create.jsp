@@ -14,7 +14,7 @@
  -->
 
 <h1>Add New Book</h1>
-<form:form method="post" action="save">
+<form:form method="post" action="create.html">
 	<table>
 		<tr>
 			<td></td>
