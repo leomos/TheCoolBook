@@ -67,7 +67,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean update(Book book) {
-		String sql = "UPDATE book SET title=?, num_pages=?, genre=?, isbn=? WHERE id=?;";
+		String sql = "UPDATE book SET title=?, num_pages=?, genre=?, isbn=?, URLimage=? WHERE id=?;";
 	    
             try {
 			

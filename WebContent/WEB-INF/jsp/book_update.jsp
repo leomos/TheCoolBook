@@ -6,38 +6,32 @@
 			<div class="col-auto">
 				<img class="rounded shadow" src="${book.getURLImage()}"
 					style="width: 200px; height: 250px;" />
+			${bookDao.bookGet} ;
 			</div>
 			<div class="col">
 				<div class="row">
 					<div class="col">
-						<form>
+						<form action="update.html" method="post">
 							<div class="form-group">
 								<label for="title-input">Title:</label> <input type="text"
-									class="form-control" id="title-input"
+									class="form-control" id="title-input" name="title"
 									value="${book.getTitle()}" />
 							</div>
 							<div class="form-group">
 								<label for="num_pages-input">Number of pages:</label> <input
-									type="text" id="num_pages-input" class="form-control"
+									type="text" id="num_pages-input" class="form-control" name="numPages"
 									value="${book.getNumPages()}" />
 							</div>
 							<div class="form-group">
 								<label for="genre-input">Genre:</label> <input type="text"
-									id="genre-input" class="form-control"
+									id="genre-input" class="form-control" name="genre"
 									value="${book.getGenre()}" />
 							</div>
 							<div class="form-group">
 								<label for="isbn-input">Isbn:</label> <input type="text"
-									id="isbn-input" class="form-control" value="${book.getIsbn()}" />
+									id="isbn-input" class="form-control" name="isbn" value="${book.getIsbn()}" />
 							</div>
-							<form>
-								<input type=button onclick="update()" value="Update" />
-								<script>
-									function update() {
-										alert("Book Added")
-									}
-								</script>
-							</form>
+							<input type="submit"/> 
 						</form>
 					</div>
 				</div>
