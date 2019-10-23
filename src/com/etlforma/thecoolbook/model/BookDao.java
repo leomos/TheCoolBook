@@ -24,7 +24,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean create(Book book) {
-		String sql = "INSERT INTO book(title, num_pages, genre, isbn) VALUES (?, ?, ?, ?);";
+		String sql = "INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (?, ?, ?, ?, ?);";
 
 		try {
 			
@@ -32,7 +32,8 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 					book.getTitle(),
 					book.getNumPages(), 
 					book.getGenre(),
-					book.getIsbn()
+					book.getIsbn(),
+					book.getURLImage()
 			});
 			
 			return counter > 0;
@@ -55,6 +56,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 				book.setNumPages(rs.getInt("num_pages"));
 				book.setGenre(rs.getString("genre"));
 				book.setIsbn(rs.getString("isbn"));
+				book.setURLImage(rs.getString("URLimage"));
 				return book;
 			}
 
@@ -65,15 +67,16 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean update(Book book) {
-		String sql = "UPDATE book SET title=?, num_pages=?, genre=?, isbn=? WHERE id=?;";
+		String sql = "UPDATE book SET title=?, num_pages=?, genre=?, isbn=?, URLimage=? WHERE id=?;";
 	    
-            try {
-			
+        try {
+			//
 			int counter = jdbcTemplate.update(sql, new Object[] {
 					book.getTitle(),
 					book.getNumPages(), 
 					book.getGenre(),
 					book.getIsbn(),
+					book.getURLImage(),
 					book.getId()
 			});
 			
@@ -113,6 +116,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 				book.setNumPages(rs.getInt("num_pages"));
 				book.setGenre(rs.getString("genre"));
 				book.setIsbn(rs.getString("isbn"));
+				book.setURLImage(rs.getString("URLimage"));
 				return book;
 			}
 
