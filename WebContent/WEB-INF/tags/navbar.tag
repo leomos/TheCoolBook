@@ -1,4 +1,4 @@
-<%@tag description="Navbar" pageEncoding="UTF-8"%>
+<%@ tag description="Navbar" pageEncoding="UTF-8"%>
 <nav class="navbar navbar-light navbar-expand-md">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="/thecoolbook">TheCoolBook</a>

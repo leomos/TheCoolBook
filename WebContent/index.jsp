@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
 	<nav class="navbar navbar-light navbar-expand-md">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.jsp">TheCoolBook</a>
@@ -22,7 +21,7 @@
 					<li class="nav-item" role="presentation"><a
 						class="nav-link active" href="authors.html">Authors</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="books.html">Books</a></li>
+						href="allbooks.html">Books</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
 						href="events.html">Events</a></li>
 				</ul>

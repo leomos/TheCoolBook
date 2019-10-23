@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.etlforma.thecoolbook.model.Dao;
@@ -33,6 +34,15 @@ public class UserController {
 		User user = userDao.get(id);
 		model.addObject("user", user);
 		model.setViewName("user_get");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/user/{id}/update")
+	public ModelAndView updateUser(@PathVariable Integer id, ModelAndView model) {
+		User user = userDao.get(id);
+		model.addObject("user", user);
+		model.setViewName("user_update");
 		
 		return model;
 	}
