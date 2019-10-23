@@ -53,7 +53,8 @@ public class BookController {
 	@RequestMapping(value = "/book/{id}/update", method = RequestMethod.POST)
 	public String updateBook(@ModelAttribute Book book, @PathVariable Integer id) {
 		book.setId(id);
-		bookDao.update(book);
+		bookDao.update(book);		
+//		System.out.println(book.getURLImage());
 //		boolean resp = 
 //		bookModel.addAttribute("id", id);
 //		if (resp == true) {
@@ -64,6 +65,6 @@ public class BookController {
 //			bookModel.addAttribute("msg", "User with id : " + id + " updation failed.");
 //			bookModel.addAttribute("bookDetail", userDetailService.getUserDetail(id));
 //			return "update";
-		return "update";
+		return "book_update";
 	}
 }

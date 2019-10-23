@@ -24,7 +24,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean create(Book book) {
-		String sql = "INSERT INTO book(title, num_pages, genre, isbn, URLImage) VALUES (?, ?, ?, ?, ?);";
+		String sql = "INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (?, ?, ?, ?, ?);";
 
 		try {
 			
@@ -69,7 +69,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 	public Boolean update(Book book) {
 		String sql = "UPDATE book SET title=?, num_pages=?, genre=?, isbn=?, URLimage=? WHERE id=?;";
 	    
-            try {
+        try {
 			//
 			int counter = jdbcTemplate.update(sql, new Object[] {
 					book.getTitle(),

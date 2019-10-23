@@ -6,7 +6,9 @@
 			<div class="col-auto">
 				<img class="rounded shadow" src="${book.getURLImage()}"
 					style="width: 200px; height: 250px;" />
-			${bookDao.bookGet} ;
+
+
+
 			</div>
 			<div class="col">
 				<div class="row">
@@ -19,8 +21,8 @@
 							</div>
 							<div class="form-group">
 								<label for="num_pages-input">Number of pages:</label> <input
-									type="text" id="num_pages-input" class="form-control" name="numPages"
-									value="${book.getNumPages()}" />
+									type="text" id="num_pages-input" class="form-control"
+									name="numPages" value="${book.getNumPages()}" />
 							</div>
 							<div class="form-group">
 								<label for="genre-input">Genre:</label> <input type="text"
@@ -29,8 +31,17 @@
 							</div>
 							<div class="form-group">
 								<label for="isbn-input">Isbn:</label> <input type="text"
-									id="isbn-input" class="form-control" name="isbn" value="${book.getIsbn()}" />
-							</div>							<input type="submit"/> 
+									id="isbn-input" class="form-control" name="isbn"
+									value="${book.getIsbn()}" />
+							</div>
+
+							<div class="form-group">
+								<label for="URLImage-input">URL:</label> <input type="text"
+									class="form-control" id="URLImage-input" name="URLImage"
+									value="${book.getURLImage()}" />
+							</div>
+
+							<input type="submit" />
 						</form>
 					</div>
 				</div>
