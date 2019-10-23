@@ -1,6 +1,8 @@
 package com.etlforma.thecoolbook.model;
 
-import java.sql.Date;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class Event {
 
@@ -10,6 +12,7 @@ public class Event {
 
 	private String eventLocation;
 
+	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	private Date eventDate;
 
 	public Integer getIdEvent() {

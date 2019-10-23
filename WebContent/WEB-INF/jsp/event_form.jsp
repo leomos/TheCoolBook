@@ -3,7 +3,11 @@
   
         <h1>Add New Event</h1>  
        <form:form method="post" action="save">    
-        <table >    
+        <table >  
+        <tr>  
+        <td></td>    
+         <td><form:hidden  path="id" /></td>  
+         </tr>     
          <tr>    
           <td>Name : </td>   
           <td><form:input path="eventName"  /></td>  
