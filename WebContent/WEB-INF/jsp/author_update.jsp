@@ -11,8 +11,7 @@
 			<div class="col">
 				<div class="row">
 					<div class="col">
-						<form action="/thecoolbook/author/${author.getId()}/update"
-							method="POST">
+						<form action="update.html" method="post">
 							<div class="form-group">
 								<label for="id-input">Id:</label> <input type="text"
 									class="form-control" name="id" id="id-input"
@@ -38,7 +37,7 @@
 									type="text" name="birthplace" id="birthplace-input"
 									class="form-control" value="${author.getBirthPlace()}" />
 							</div>
-							<button type="submit" class="btn btn-primary">Send</button>
+							<input type="submit" value="Send"/>
 						</form>
 					</div>
 				</div>
