@@ -49,7 +49,7 @@ public class BookController {
 
 		return model;
 	}
-
+//
 	@RequestMapping(value = "/book/{id}/update", method = RequestMethod.POST)
 	public String updateBook(@ModelAttribute Book book, @PathVariable Integer id) {
 		book.setId(id);

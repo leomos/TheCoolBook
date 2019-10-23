@@ -30,8 +30,7 @@
 							<div class="form-group">
 								<label for="isbn-input">Isbn:</label> <input type="text"
 									id="isbn-input" class="form-control" name="isbn" value="${book.getIsbn()}" />
-							</div>
-							<input type="submit"/> 
+							</div>							<input type="submit"/> 
 						</form>
 					</div>
 				</div>
