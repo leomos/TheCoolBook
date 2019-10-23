@@ -8,7 +8,7 @@ public interface Dao<E> {
 	
 	public List<E> read();
 	
-	public Boolean update(E entity);
+	public int update(E entity);
 	
 	public Boolean delete(Integer id);
 	

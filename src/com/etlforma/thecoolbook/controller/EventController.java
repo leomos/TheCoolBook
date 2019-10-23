@@ -55,14 +55,14 @@ public class EventController {
 	}
 	
     @RequestMapping(value="/event/update/{idEvent}")    
-    public String edit(@PathVariable int idEvent, Model model){    
+    public String update(@PathVariable int idEvent, Model model){    
     	Event event = eventDao.get(idEvent);   
-        model.addAttribute("event",event);  
+        model.addAttribute("command",event);  
         return "event_update";    
     }    
     
     
-	@RequestMapping(value = "/event/updatesave", method=RequestMethod.POST)
+	@RequestMapping(value = "/event/update/updatesave", method=RequestMethod.POST)
 	public String updatesave(@ModelAttribute("event") Event event) {
 		eventDao.update(event);    
         return "redirect:/event/read";
@@ -79,17 +79,17 @@ public class EventController {
 //		return model;
 //	}
 	
-	@RequestMapping(value = "/event/{idEvent}/updated", method=RequestMethod.GET)
-	public ModelAndView getUpdateOrNot(@PathVariable Integer idEvent, ModelAndView model) {
-		Event event = eventDao.get(idEvent);
-		Boolean up = eventDao.update(event);
-		int id = event.getIdEvent();
-		model.addObject("up", up);
-		model.addObject("id", id);
-		model.setViewName("event_updated");
-
-		return model;
-	}
+//	@RequestMapping(value = "/event/{idEvent}/updated", method=RequestMethod.GET)
+//	public ModelAndView getUpdateOrNot(@PathVariable Integer idEvent, ModelAndView model) {
+//		Event event = eventDao.get(idEvent);
+//		int up = eventDao.update(event);
+//		int id = event.getIdEvent();
+//		model.addObject("up", up);
+//		model.addObject("id", id);
+//		model.setViewName("event_updated");
+//
+//		return model;
+//	}
 	
 //	@RequestMapping(value = "/event/created")
 //	public ModelAndView createEvent(@PathVariable Event created, ModelAndView model) {

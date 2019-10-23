@@ -1,5 +1,7 @@
 package com.etlforma.thecoolbook.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -42,7 +44,12 @@ public class Event {
 	public Date getEventDate() {
 		return eventDate;
 	}
-
+	public String getEventDateString() {
+	String pattern="yyyy-MM-dd HH:mm:ss";
+	
+	DateFormat df = new SimpleDateFormat(pattern);
+	return df.format(eventDate);
+	}
 	public void setEventDate(Date eventDate) {
 		this.eventDate = eventDate;
 	}
