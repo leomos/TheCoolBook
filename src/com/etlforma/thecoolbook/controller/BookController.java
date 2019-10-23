@@ -35,8 +35,16 @@ public class BookController {
 
 	@RequestMapping(value = "/book/create", method = RequestMethod.POST)
 	public String createBook(@ModelAttribute Book book) {
-		bookDao.update(book);
+		bookDao.create(book);
 		return "book_create";
+	}
+	
+	@RequestMapping(value = "/book/create", method = RequestMethod.GET)
+	public ModelAndView createBook(ModelAndView model, Book book) {
+		model.addObject("book", book);
+		model.setViewName("book_create");//nome del file jsp senza estensione
+
+		return model;
 	}
 	
 	@RequestMapping(value = "/book/{id}")
