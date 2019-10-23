@@ -26,18 +26,18 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav">
-					<li class="nav-item" role="presentation"><a
-						class="nav-link " href="authors.html">Authors</a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link "
+						href="authors.html">Authors</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
 						href="books.html">Books</a></li>
-					<li class="nav-item active" role="presentation"><a class="nav-link"
-						href="events.html">Events</a></li>
+					<li class="nav-item active" role="presentation"><a
+						class="nav-link" href="events.html">Events</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div class="container">
-	<h3>All Events</h3>
+		<h3>The Event</h3>
 	</div>
 	<div class="container">
 		<div class="table-responsive">
@@ -48,23 +48,23 @@
 						<th>Author</th>
 						<th>Date Event</th>
 						<th>Location Event</th>
+						<th>Update</th>
+						<th>Delete</th>
 					</tr>
 				</thead>
-				<c:forEach items="${events}" var="event">
 				<tr>
-					<td><a
-						href="http://localhost:8085/thecoolbook/event/${event.getIdEvent()}.html">${event.getIdEvent()}</a></td>
+					<td>${event.getIdEvent()}</td>
 					<td>${event.getEventName()}</td>
-					<td>${event.getEventLocation()}</td>
 					<td>${event.getEventDate()}</td>
-			</c:forEach>
-				
-				</table>
-				
-				   <a href="http://localhost:8085/thecoolbook/event/read">List of Events (link momentaneo)</a> 
+					<td>${event.getEventLocation()}</td>
+					<td><a href="update/${event.getIdEvent()}">Edit</a></td>
+					<td><a href="delete/${event.getIdEvent()}">Delete</a></td>
+			</table>
+
+
 		</div>
-	</div>						
+	</div>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
