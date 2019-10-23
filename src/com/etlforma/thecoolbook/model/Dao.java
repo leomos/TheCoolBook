@@ -10,7 +10,7 @@ public interface Dao<E> {
 	
 	public int update(E entity);
 	
-	public Boolean delete(Integer id);
+	public int delete(Integer id);
 	
 	public E get(Integer id);
 	

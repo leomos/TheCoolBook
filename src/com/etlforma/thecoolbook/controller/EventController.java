@@ -68,6 +68,12 @@ public class EventController {
         return "redirect:/event/read";
 	}
 	
+	@RequestMapping(value="/event/delete/{idEvent}",method = RequestMethod.GET)    
+    public String delete(@PathVariable int idEvent){    
+		eventDao.delete(idEvent);    
+        return "redirect:/event/read";    
+    }     
+	
 //	@RequestMapping(value = "/event/{idEvent}/update", method=RequestMethod.POST)
 //	public ModelAndView grabDataToUpdate(@PathVariable Integer idEvent, @RequestBody String eventName, @RequestBody String eventLocation, @RequestBody Date eventDate, ModelAndView model) {
 //		System.out.println(eventName);

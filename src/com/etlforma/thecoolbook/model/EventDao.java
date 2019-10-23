@@ -89,9 +89,9 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 	}    
 
 	@Override
-	public Boolean delete(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public int delete(Integer idEvent) {
+		String sql="delete from event where id_event="+idEvent+"";    
+	    return jdbcTemplate.update(sql);    
 	}
 
 	@Override

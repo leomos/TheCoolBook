@@ -10,7 +10,7 @@ public class Events {
 	@RequestMapping("/events")
 	public ModelAndView events() {
  
-		String message = "Hello, events!";
+		String message = "Ecco gli eventi!";
 		return new ModelAndView("events", "message", message);	} //il primo "message" è il nome dell'oggetto e il secondo message è l'oggetto
 																//il "welcome" dove va l'oggetto
 }

@@ -1,5 +1,13 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <meta charset="utf-8">
 <title>Events</title>
 <meta name="viewport"
@@ -19,10 +27,10 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav">
 					<li class="nav-item" role="presentation"><a
-						class="nav-link active" href="authors.html">Authors</a></li>
+						class="nav-link " href="authors.html">Authors</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
 						href="books.html">Books</a></li>
-					<li class="nav-item" role="presentation"><a class="nav-link"
+					<li class="nav-item active" role="presentation"><a class="nav-link"
 						href="events.html">Events</a></li>
 				</ul>
 			</div>
@@ -42,7 +50,18 @@
 						<th>Location Event</th>
 					</tr>
 				</thead>
+				<c:forEach items="${events}" var="event">
+				<tr>
+					<td><a
+						href="http://localhost:8085/thecoolbook/event/${event.getIdEvent()}.html">${event.getIdEvent()}</a></td>
+					<td>${event.getEventName()}</td>
+					<td>${event.getEventLocation()}</td>
+					<td>${event.getEventDate()}</td>
+			</c:forEach>
+				
 				</table>
+				
+				   <a href="http://localhost:8085/thecoolbook/event/read">List of Events (link momentaneo)</a> 
 		</div>
 	</div>						
 	<script src="assets/js/jquery.min.js"></script>
