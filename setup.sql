@@ -211,24 +211,31 @@ CREATE TABLE author_book (
 -- event
 
 CREATE TABLE event (
-     id_event INT AUTO_INCREMENT PRIMARY KEY,
-     event_name VARCHAR(255) NOT NULL,
-     event_location VARCHAR(50) NOT NULL,
-     event_date DATETIME NOT NULL
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(255) NOT NULL,
+     location VARCHAR(50) NOT NULL,
+     datetime DATETIME NOT NULL
 );
 
-INSERT INTO event(event_name, event_location, event_date) VALUES (
+INSERT INTO event(name, location, datetime) VALUES (
 	'ISdA',
 	'OverNet',
 	'2019-10-25 12:00:00'
 );
 
+-- event_book
+DROP TABLE IF EXISTS eventbook;
 
 CREATE TABLE event_book (
-     id_event INT NOT NULL,
-     id_book INT NOT NULL,
-     FOREIGN KEY (id_event) REFERENCES event(id_event),
-     FOREIGN KEY (id_book) REFERENCES book(id)
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+	event_id INT NOT NULL,
+	book_id INT NOT NULL,
+	FOREIGN KEY (event_id) REFERENCES event(id),
+    FOREIGN KEY (book_id) REFERENCES book(id)
 );
 
-INSERT INTO event_book( id_event, id_book) VALUES (1,1);
+INSERT INTO event_book(event_id, book_id) VALUES (
+	1,
+    1
+);
+

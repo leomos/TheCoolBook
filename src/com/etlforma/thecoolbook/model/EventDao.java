@@ -23,7 +23,7 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean create(Event entity) {
-		String sql = "INSERT INTO Event(id_event, event_name, event_location, event_date) VALUES (?, ?, ?, ?);";
+		String sql = "INSERT INTO Event(id, name, place, datetime) VALUES (?, ?, ?, ?);";
 
 		try {
 
@@ -50,10 +50,10 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 			public Event mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Event event = new Event();
 
-				event.setIdEvent(rs.getInt("id_event"));
-				event.setEventName(rs.getString("event_name"));
-				event.setEventLocation(rs.getString("event_location"));
-				event.setEventDate(rs.getDate("event_date"));
+				event.setIdEvent(rs.getInt("id"));
+				event.setEventName(rs.getString("name"));
+				event.setEventLocation(rs.getString("place"));
+				event.setEventDate(rs.getDate("datetime"));
 
 				return event;
 			}
@@ -65,7 +65,7 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 
 //	@Override
 //	public Boolean update(Event event) {
-//		String sql = "UPDATE event SET event_name=?, event_location=?, event_date=?;";
+//		String sql = "UPDATE event SET name=?, place=?, datetime=?;";
 //	    
 //            try {
 //			
@@ -84,7 +84,7 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 //	}
 	
 	public Boolean update(Event event){    
-	    String sql="update event set event_name='"+event.getEventName()+"', event_location='"+event.getEventLocation()+"',event_date='"+event.getEventDateString()+"' where id_event="+event.getIdEvent()+"";    
+	    String sql="update event set name='"+event.getEventName()+"', place='"+event.getEventLocation()+"',datetime='"+event.getEventDateString()+"' where id="+event.getIdEvent()+"";    
 	    
 	    int c=jdbcTemplate.update(sql);
 	    return c>0;    
@@ -92,7 +92,7 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 
 	@Override
 	public Boolean delete(Integer idEvent) {
-		String sql="delete from event where id_event="+idEvent+""; 
+		String sql="delete from event where id="+idEvent+""; 
 		
 		int c=jdbcTemplate.update(sql);
 	    return c>0;    
@@ -100,16 +100,16 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 
 	@Override
 	public Event get(Integer idEvent) {
-		List<Event> events = jdbcTemplate.query("SELECT * FROM event WHERE id_event=" + idEvent + ";", new RowMapper<Event>() {
+		List<Event> events = jdbcTemplate.query("SELECT * FROM event WHERE id=" + idEvent + ";", new RowMapper<Event>() {
 
 			@Override
 			public Event mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Event event = new Event();
 
-				event.setIdEvent(rs.getInt("id_event"));
-				event.setEventName(rs.getString("event_name"));
-				event.setEventLocation(rs.getString("event_location"));
-				event.setEventDate(rs.getDate("event_date"));
+				event.setIdEvent(rs.getInt("id"));
+				event.setEventName(rs.getString("name"));
+				event.setEventLocation(rs.getString("place"));
+				event.setEventDate(rs.getDate("datetime"));
 
 				return event;
 			}
