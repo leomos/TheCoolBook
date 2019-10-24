@@ -16,28 +16,28 @@
 							<div class="form-group">
 								<label for="title-input">Title:</label> <input type="text"
 									id="title-input" class="form-control" name="title"
-									 />
+									 required/>
 							</div>
 							<div class="form-group">
 								<label for="num_pages-input">Number of pages:</label> <input
 									type="text" id="num_pages-input" class="form-control"
-									name="numPages"/>
+									name="numPages" required/>
 							</div>
 							<div class="form-group">
 								<label for="genre-input">Genre:</label> <input type="text"
 									id="genre-input" class="form-control" name="genre"
-									/>
+									required/>
 							</div>
 							<div class="form-group">
 								<label for="isbn-input">Isbn:</label> <input type="text"
 									id="isbn-input" class="form-control" name="isbn"
-									/>
+									required/>
 							</div>
 
 							<div class="form-group">
 								<label for="URLImage-input">URL:</label> <input type="text"
 									class="form-control" id="URLImage-input" name="URLImage"
-									/>
+									required/>
 							</div>
 
 							<input type="submit" />
