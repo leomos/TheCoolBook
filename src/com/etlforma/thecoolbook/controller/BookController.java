@@ -33,6 +33,7 @@ public class BookController {
 
 	}
 
+	
 	@RequestMapping(value = "/book/create", method = RequestMethod.POST)
 	public String createBook(@ModelAttribute Book book) {
 		bookDao.create(book);
