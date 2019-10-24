@@ -33,7 +33,9 @@
 	<td>
 		<form action="read" method="post">
 			<!-- style="display:none;" -->
-			<input type="submit" class="form-control" name="id" id="id" value="${book.getId()}" />
+			<input type="text" class="form-control" name="id" id="id" value="${book.getId()}" style="display:none;" />
+			<%-- <input type="submit" class="form-control" name="id" id="id" value="${book.getId()}" /> --%>
+			<input type="submit" class="form-control" value="Delete" />
 		</form>
 	</td>
 	</tr>  
