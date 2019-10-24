@@ -26,7 +26,7 @@
     
 	<c:forEach items="${books}" var="book">
 	<tr>
-	<th scope="row">${book.getTitle()}</th>
+	<th scope="row"><a href="${book.getId()}">${book.getTitle()}</a></th>
 	<td>${book.getNumPages()}</td>
 	<td>${book.getGenre()}</td>
 	<td>${book.getIsbn()}</td>
