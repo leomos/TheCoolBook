@@ -35,6 +35,13 @@ INSERT INTO book(title, num_pages, genre, isbn) VALUES (
 	'Fantasy',
 	'0123456789abc'
 );
+INSERT INTO book(title, num_pages, genre, isbn) VALUES (
+	'La museruola del mio cane',
+    '1',
+    'Fotografia',
+    '3',
+    '2434223'
+);
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'The importance of being Brutti',
     '123',
@@ -69,6 +76,20 @@ INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
     'Horror',
     '1244414234636',
     'https://img.frasicelebri.it/images/thumb_book-io-rocco.330x330_q95.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'okToDelete',
+    '100',
+    'Temporal',
+    '0123333789abc', 
+    'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'okToDelete',
+    '100',
+    'Temporal',
+    '0123333789abc', 
+    'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
 );
 
 
