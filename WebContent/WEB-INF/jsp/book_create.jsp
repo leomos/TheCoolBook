@@ -42,7 +42,7 @@
 									required />
 							</div>
 
-							<input type="submit" />
+							<input type="submit" class="btn btn-success" value="CREATE"/>
 						</form>
 					</div>
 				</div>
