@@ -48,11 +48,14 @@ public class BookController {
 	
 	//delete
 	@RequestMapping(value = "/book/read", method = RequestMethod.POST)
-	public String deleteBook(@PathParam("id-input") Integer id) {
+	public ModelAndView deleteBook(@PathParam("id") Integer id, ModelAndView model) throws IOException {
 		System.out.println(id);
 		Book book = bookDao.get(id);
 		bookDao.delete(book.getId());
-		return "book_read";
+		List<Book> books = bookDao.read();
+		model.addObject("books", books);
+		model.setViewName("book_read");
+		return model;
 	}
 	
 	
