@@ -39,6 +39,14 @@ public class BookController {
 		return "book_create";
 	}
 	
+	//delete
+	@RequestMapping(value = "/book/read", method = RequestMethod.POST)
+	public String deleteBook(@ModelAttribute Book book, @PathVariable Integer id) {
+		book.setId(id);
+		bookDao.delete(book.getId());
+		return "book_read";
+	}
+	
 	@RequestMapping(value = "/book/create", method = RequestMethod.GET)
 	public ModelAndView createBook(ModelAndView model, Book book) {
 		model.addObject("book", book);
