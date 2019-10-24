@@ -78,6 +78,27 @@ INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
     'https://img.frasicelebri.it/images/thumb_book-io-rocco.330x330_q95.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'SuperCow I - My Opium Poppy Cultivation',
+    '4141',
+    'Drama',
+    '1224589741256',
+    'https://freekidsbooks.org/wp-content/uploads/2016/12/supercowvol2-1.png'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'SuperCow II - Fighting My Heroin Addiction',
+    '12789',
+    'Drama',
+    '1234567890123',
+    'https://images-na.ssl-images-amazon.com/images/I/41WBlyXq6FL._SX258_BO1,204,203,200_.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'SuperCow III - My New Heromate',
+    '50014',
+    'Documentary',
+    '6549873571592',
+    'https://freekidsbooks.org/wp-content/uploads/2018/10/supercow_vol3_The_Reader_picturebook.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'okToDelete',
     '100',
     'Temporal',
