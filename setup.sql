@@ -35,6 +35,34 @@ INSERT INTO book(title, num_pages, genre, isbn) VALUES (
 	'Fantasy',
 	'0123456789abc'
 );
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'The importance of being Brutti',
+    '123',
+    'Erotica',
+    '6906660696969',
+    'https://www.nostrofiglio.it/site_stored/imgs/0003/047/armando.630x420.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'Electrodynamics',
+    '500',
+    'Physics',
+    '0123333789abc', 
+    'https://upload.wikimedia.org/wikipedia/commons/0/09/Front_cover_of_Griffiths%27_Electrodynamics.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'Electrodynamics',
+    '500',
+    'Physics',
+    '0123333789abc', 
+    'https://upload.wikimedia.org/wikipedia/commons/0/09/Front_cover_of_Griffiths%27_Electrodynamics.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'Programming with Plankalkül',
+    '267',
+    'Programming',
+    '033789a45234b',
+    'https://bookcover4u.com/pro/Educational-book-cover-design-P1484804032EDB-Java-web-design-internet-business-java.jpg'
+);
 
 -- author
 DROP TABLE IF EXISTS author;
