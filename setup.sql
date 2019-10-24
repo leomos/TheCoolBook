@@ -40,56 +40,77 @@ INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	500,
 	'Fantasy',
 	'0123456789abc',
-    'https://images-na.ssl-images-amazon.com/images/I/51EstVXM1UL._SX331_BO1,204,203,200_.jpg'
+    	'https://images-na.ssl-images-amazon.com/images/I/51EstVXM1UL._SX331_BO1,204,203,200_.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'The importance of being Brutti',
-    '123',
-    'Erotica',
-    '6906660696969',
-    'https://www.nostrofiglio.it/site_stored/imgs/0003/047/armando.630x420.jpg'
+    	'123',
+    	'Erotica',
+    	'6906660696969',
+    	'https://www.nostrofiglio.it/site_stored/imgs/0003/047/armando.630x420.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'Electrodynamics',
-    '500',
-    'Physics',
-    '0123333789abc', 
-    'https://upload.wikimedia.org/wikipedia/commons/0/09/Front_cover_of_Griffiths%27_Electrodynamics.jpg'
+    	'500',
+    	'Physics',
+    	'0123333789abc', 
+    	'https://upload.wikimedia.org/wikipedia/commons/0/09/Front_cover_of_Griffiths%27_Electrodynamics.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'Electrodynamics',
-    '500',
-    'Physics',
-    '0123333789abc', 
-    'https://upload.wikimedia.org/wikipedia/commons/0/09/Front_cover_of_Griffiths%27_Electrodynamics.jpg'
+    	'500',
+    	'Physics',
+    	'0123333789abc', 
+    	'https://upload.wikimedia.org/wikipedia/commons/0/09/Front_cover_of_Griffiths%27_Electrodynamics.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'Programming with Plankalkül',
-    '267',
-    'Programming',
-    '033789a45234b',
-    'https://bookcover4u.com/pro/Educational-book-cover-design-P1484804032EDB-Java-web-design-internet-business-java.jpg'
+    	'267',
+    	'Programming',
+    	'033789a45234b',
+    	'https://bookcover4u.com/pro/Educational-book-cover-design-P1484804032EDB-Java-web-design-internet-business-java.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'Io, Rocco',
-    '190',
-    'Horror',
-    '1244414234636',
-    'https://img.frasicelebri.it/images/thumb_book-io-rocco.330x330_q95.jpg'
+    	'190',
+    	'Horror',
+    	'1244414234636',
+    	'https://img.frasicelebri.it/images/thumb_book-io-rocco.330x330_q95.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'SuperCow I - My Opium Poppy Cultivation',
+    '4141',
+    'Drama',
+    '1224589741256',
+    'https://freekidsbooks.org/wp-content/uploads/2016/12/supercowvol2-1.png'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'SuperCow II - Fighting My Heroin Addiction',
+    '12789',
+    'Drama',
+    '1234567890123',
+    'https://images-na.ssl-images-amazon.com/images/I/41WBlyXq6FL._SX258_BO1,204,203,200_.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'SuperCow III - My New Heromate',
+    '50014',
+    'Documentary',
+    '6549873571592',
+    'https://freekidsbooks.org/wp-content/uploads/2018/10/supercow_vol3_The_Reader_picturebook.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'okToDelete',
-    '100',
-    'Temporal',
-    '0123333789abc', 
-    'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
+    	'100',
+    	'Temporal',
+    	'0123333789abc', 
+    	'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'okToDelete',
-    '100',
-    'Temporal',
-    '0123333789abc', 
-    'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
+    	'100',
+    	'Temporal',
+    	'0123333789abc', 
+    	'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
 );
 
 -- author
@@ -185,6 +206,13 @@ INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
 	'Genova'
 );
 
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Sergio', 
+	'Evangelista', 
+	'1994-01-17', 
+	'Venosa'
+);
+
 ALTER TABLE author ADD COLUMN image VARCHAR (255); 
 UPDATE author SET image = 'https://www.studiarapido.it/wp-content/uploads/2015/02/manzoni.jpg' where id = 1;
 UPDATE author SET image = 'https://biografieonline.it/img/bio/u/Ugo_Foscolo.jpg' where id = 2;
@@ -211,10 +239,10 @@ CREATE TABLE author_book (
 -- event
 
 CREATE TABLE event (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     name VARCHAR(255) NOT NULL,
-     place VARCHAR(50) NOT NULL,
-     datetime DATETIME NOT NULL
+     	id INT AUTO_INCREMENT PRIMARY KEY,
+     	name VARCHAR(255) NOT NULL,
+     	place VARCHAR(50) NOT NULL,
+     	datetime DATETIME NOT NULL
 );
 
 INSERT INTO event(name, place, datetime) VALUES (
@@ -231,11 +259,10 @@ CREATE TABLE event_book (
 	event_id INT NOT NULL,
 	book_id INT NOT NULL,
 	FOREIGN KEY (event_id) REFERENCES event(id),
-    FOREIGN KEY (book_id) REFERENCES book(id)
+    	FOREIGN KEY (book_id) REFERENCES book(id)
 );
 
 INSERT INTO event_book(event_id, book_id) VALUES (
 	1,
-    1
+    	1
 );
-
