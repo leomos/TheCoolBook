@@ -213,11 +213,11 @@ CREATE TABLE author_book (
 CREATE TABLE event (
      id INT AUTO_INCREMENT PRIMARY KEY,
      name VARCHAR(255) NOT NULL,
-     location VARCHAR(50) NOT NULL,
+     place VARCHAR(50) NOT NULL,
      datetime DATETIME NOT NULL
 );
 
-INSERT INTO event(name, location, datetime) VALUES (
+INSERT INTO event(name, place, datetime) VALUES (
 	'ISdA',
 	'OverNet',
 	'2019-10-25 12:00:00'
