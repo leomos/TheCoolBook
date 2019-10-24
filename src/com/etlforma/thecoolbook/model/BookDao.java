@@ -59,7 +59,7 @@ public class BookDao implements Dao<Book>, JdbcTemplateInterface {
 				book.setURLImage(rs.getString("URLimage"));
 				return book;
 			}
-
+ 
 		});
 
 		return books;

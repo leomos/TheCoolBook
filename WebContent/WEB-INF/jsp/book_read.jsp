@@ -12,13 +12,13 @@
 </head>
 <body>
 
-	<table class="table">
+	<table class="table" style="padding: 20px;">
 	<thead>
     <tr>
-      <th scope="col">title</th>
-      <th scope="col">num_pages</th>
-      <th scope="col">genre</th>
-      <th scope="col">isbn</th>
+      <th scope="col">Title</th>
+      <th scope="col">Number of Pages</th>
+      <th scope="col">Genre</th>
+      <th scope="col">ISBN</th>
     </tr>
   </thead>
   <tbody>

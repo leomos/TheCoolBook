@@ -13,7 +13,7 @@
 					<a class="nav-link" href="authors.html">Authors</a>
 				</li>
 				<li class="nav-item" role="presentation">
-					<a class="nav-link" href="allbooks.html">Books</a>
+					<a class="nav-link" href="book/read">Books</a>
 				</li>
 				<li class="nav-item" role="presentation">
 					<a class="nav-link" href="events.html">Events</a>
