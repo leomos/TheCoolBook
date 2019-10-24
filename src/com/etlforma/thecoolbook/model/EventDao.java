@@ -83,15 +83,19 @@ public class EventDao implements Dao<Event>, JdbcTemplateInterface {
 //		}
 //	}
 	
-	public int update(Event event){    
+	public Boolean update(Event event){    
 	    String sql="update event set event_name='"+event.getEventName()+"', event_location='"+event.getEventLocation()+"',event_date='"+event.getEventDateString()+"' where id_event="+event.getIdEvent()+"";    
-	    return jdbcTemplate.update(sql);    
+	    
+	    int c=jdbcTemplate.update(sql);
+	    return c>0;    
 	}    
 
 	@Override
-	public int delete(Integer idEvent) {
-		String sql="delete from event where id_event="+idEvent+"";    
-	    return jdbcTemplate.update(sql);    
+	public Boolean delete(Integer idEvent) {
+		String sql="delete from event where id_event="+idEvent+""; 
+		
+		int c=jdbcTemplate.update(sql);
+	    return c>0;    
 	}
 
 	@Override

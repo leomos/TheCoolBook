@@ -67,15 +67,15 @@ public class UserDao implements Dao<User>, JdbcTemplateInterface {
 	}
 
 	@Override
-	public int update(User entity) {
+	public Boolean update(User entity) {
 		// TODO Auto-generated method stub
-		return 0;
+		return false;
 	}
 
 	@Override
-	public int delete(Integer id) {
+	public Boolean delete(Integer id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return false;
 	}
 
 	@Override
