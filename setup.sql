@@ -63,6 +63,17 @@ INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
     '033789a45234b',
     'https://bookcover4u.com/pro/Educational-book-cover-design-P1484804032EDB-Java-web-design-internet-business-java.jpg'
 );
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'Io, Rocco',
+    '190',
+    'Horror',
+    '1244414234636',
+    'https://img.frasicelebri.it/images/thumb_book-io-rocco.330x330_q95.jpg'
+);
+
+
+
+
 
 -- author
 DROP TABLE IF EXISTS author;
