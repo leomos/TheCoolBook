@@ -67,30 +67,39 @@ public class AuthorDao implements Dao<Author>, JdbcTemplateInterface {
 		return authors;
 	}
 
-	@Override
-	public Boolean update(Author author) {
-		String sql = "UPDATE author SET first_name=?, last_name=?, birth_date=?, birth_place=?, image=? WHERE id=?;";
-		try {
-			int counter = jdbcTemplate.update(sql, new Object[] {
+//	@Override
+//	public Boolean update(Author author) {
+//		String sql = "UPDATE author SET first_name=?, last_name=?, birth_date=?, birth_place=?, image=? WHERE id=?;";
+//		try {
+//			int counter = jdbcTemplate.update(sql, new Object[] {
+//
+//					author.getFirstName(), 
+//					author.getLastName(), 
+//					author.getBirthDay(),
+//					author.getBirthPlace(),
+//					author.getImage(),
+//					author.getId() 
+//					});
+//			return counter > 0;
+//
+//		} catch (Exception e) {
+//
+//			e.printStackTrace();
+//
+//			return false;
+//
+//		}
+//	}
 
-					author.getFirstName(), 
-					author.getLastName(), 
-					author.getBirthDay(),
-					author.getBirthPlace(),
-					author.getImage(),
-					author.getId() 
-					});
-			return counter > 0;
-
-		} catch (Exception e) {
-
-			e.printStackTrace();
-
-			return false;
-
-		}
-	}
-
+	public Boolean update(Author author){    
+	    String sql="update author set first_name='"+author.getFirstName()+"', last_name='"+author.getLastName()+"',birth_date='"+author.getBirthDay()+"', birth_place='"+author.getBirthPlace()+"' where id="+author.getId()+"";    
+	    
+	    int c=jdbcTemplate.update(sql);
+	    return c>0;    
+	}    
+	
+	
+	
 	@Override
 	public Boolean delete(Integer id) {
 		String sql = "DELETE FROM author WHERE id=" + id + ";";

@@ -34,5 +34,6 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	<a href = "/thecoolbook/author/create"> Add new author </a>
 </body>
 </html>

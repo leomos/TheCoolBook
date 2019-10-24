@@ -19,22 +19,22 @@
 							</div>
 							<div class="form-group">
 								<label for="firstname-input">First name:</label> <input
-									type="text" name="firstname" id="firstname-input"
+									type="text" name="firstName" id="firstname-input"
 									class="form-control" value="${author.getFirstName()}" />
 							</div>
 							<div class="form-group">
 								<label for="lastname-input">Last name:</label> <input
-									type="text" name="lastname" id="lastname-input"
+									type="text" name="lastName" id="lastname-input"
 									class="form-control" value="${author.getLastName()}" />
 							</div>
 							<div class="form-group">
 								<label for="birthdate-input">Birth date:</label> <input
-									type="date" class="form-control" name="birthdate"
+									type="date" class="form-control" name="birthDay"
 									id="birthdate-input" value="${author.getBirthDay()}" />
 							</div>
 							<div class="form-group">
 								<label for="birthplace-input">Birth place:</label> <input
-									type="text" name="birthplace" id="birthplace-input"
+									type="text" name="birthPlace" id="birthplace-input"
 									class="form-control" value="${author.getBirthPlace()}" />
 							</div>
 							<input type="submit" value="Send"/>

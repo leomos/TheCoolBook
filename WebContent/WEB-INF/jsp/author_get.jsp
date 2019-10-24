@@ -1,12 +1,30 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags"%>
+<t:page>
+	<t:navbar></t:navbar>
+	<html>
 <head>
 <title>TheCoolBook</title>
 </head>
 <body>
-	<h3>${author.getFirstName()} ${author.getLastName()} nato il
-		${author.getBirthDay()} a ${author.getBirthPlace()}</h3>
-	<img class="rounded-circle shadow" src='${author.getImage()}'
-		style="width: 150px; height: 150px;" />
+	<div class="container-fluid">
+		<div class="text-center">
+			<h4>${author.getFirstName()} ${author.getLastName()} nato il
+				${author.getBirthDay()} a ${author.getBirthPlace()}</h4>
+
+
+		</div>
+		<br>
+		<div class="text-center">
+			<img class="rounded-circle shadow" src='${author.getImage()}'
+				style="width: 200px; height: 200px;" /> <br> <br>
+
+		</div>
+		<div class="text-center">
+			<a href="/thecoolbook/author/${author.getId()}/update.html">
+				Update </a> <a href="/thecoolbook/author/${author.getId()}/delete.html">
+				Delete </a>
+		</div>
+	</div>
 </body>
-</html>
+	</html>
+</t:page>

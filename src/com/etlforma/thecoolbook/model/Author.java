@@ -1,5 +1,7 @@
 package com.etlforma.thecoolbook.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Author {
 	
 	private Integer id;
@@ -8,6 +10,7 @@ public class Author {
 	
 	private String lastName;
 	
+	@DateTimeFormat(pattern="yyyy-MM-dd")	
 	private String birthDay;
 	
 	private String birthPlace;

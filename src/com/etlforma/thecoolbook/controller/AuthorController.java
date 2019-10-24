@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.etlforma.thecoolbook.model.Dao;
+import com.etlforma.thecoolbook.model.Event;
 import com.etlforma.thecoolbook.model.Author;
 
 @Controller
@@ -55,7 +57,25 @@ public class AuthorController {
 		author.setId(id);
 		authorDao.update(author);
 
-		return "author_update";
+		return "redirect:/author/read";
 
 	}
+
+	@RequestMapping("/author/create")
+	public String showform(Model m) {
+		m.addAttribute("command", new Author());
+		return "author_create";
+	}
+	
+    @RequestMapping(value="/author/save", method = RequestMethod.POST)    
+    public String save(@ModelAttribute("author") Author author){   	
+    	authorDao.create(author);    
+        return "redirect:/author/read";
+    }  
+    
+    @RequestMapping(value="/author/{id}/delete", method = RequestMethod.GET)    
+    public String delete(@PathVariable Integer id){   	
+    	authorDao.delete(id);    
+        return "redirect:/author/read";
+    }  
 }
