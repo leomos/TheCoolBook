@@ -37,14 +37,17 @@
 							</h3>
 							<p>${book.getIsbn()}<p>
 						</div>
-
 						<div>
 							<h3>
 								<label>URL:</label>
 							</h3>
 							<p>${book.getURLImage()}"</p>
 						</div>
-
+						<div>
+							<button type="button" class="btn btn-info">
+								<a href="${book.getId()}/update" style="color: black;">UPDATE</a>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>

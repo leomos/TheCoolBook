@@ -40,7 +40,7 @@ INSERT INTO book(title, num_pages, genre, isbn) VALUES (
     '1',
     'Fotografia',
     '3',
-    '2434223'
+    'https://www.andareatartufi.it/wp-content/uploads/2019/03/museruola-anti-processionaria-1.jpg'
 );
 INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
 	'The importance of being Brutti',
