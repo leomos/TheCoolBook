@@ -1,3 +1,6 @@
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags"%>
+<t:page>
+	<t:navbar></t:navbar>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
@@ -24,7 +27,7 @@
 			<c:forEach items="${authors}" var="author">
 				<tr>
 					<td><a
-						href="http://localhost:8082/thecoolbook/author/${author.getId()}.html">${author.getId()}</a></td>
+						href="/thecoolbook/author/${author.getId()}.html">${author.getId()}</a></td>
 					<td>${author.getFirstName()}</td>
 					<td>${author.getLastName()}</td>
 					<td><a
@@ -37,3 +40,4 @@
 	<a href = "/thecoolbook/author/create"> Add new author </a>
 </body>
 </html>
+</t:page>
