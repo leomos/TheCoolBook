@@ -77,12 +77,103 @@ CREATE TABLE author (
     birth_place VARCHAR(255) NOT NULL
 );
 
-INSERT INTO author(first_name, last_name, birth_date, birth_place) VALUES (
-	'John Ronald Reuel',
-	'Tolkien',
-	'1892-01-03',
-	'Bloemfontein, South Africa'
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Alessandro', 
+	'Manzoni', 
+	'1785-05-07', 
+	'Milano'
 );
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Ugo', 
+	'Foscolo', 
+	'1778-09-10', 
+	'Zante'
+);
+	
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Gabriele', 
+	'D Annunzio', 
+	'1785-04-10', 
+	'Pescara'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Giovanni', 
+	'Pascoli', 
+	'1855-12-31', 
+	'San Mauro Pascoli'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Luigi', 
+	'Pirandello', 
+	'1867-12-10', 
+	'Agrigento'
+); 
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Giuseppe', 
+	'Ungaretti', 
+	'1888-02-08', 
+	'Alessandria D Egitto'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Alda', 
+	'Merini', 
+	'1931-02-08', 
+	'Milano'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Cesare', 
+	'Pavese', 
+	'1908-02-08', 
+	'Santo Stefano Belbo'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Elsa',
+	'Morante', 
+	'1912-02-08',
+	'Roma'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Italo', 
+	'Calvino', 
+	'1923-02-08', 
+	'L Avana'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Primo',
+	'Levi', 
+	'1919-02-08', 
+	'Torino'
+);
+
+INSERT INTO author (first_name, last_name, birth_date, birth_place) VALUES (
+	'Eugenio', 
+	'Montale', 
+	'1896-02-08', 
+	'Genova'
+);
+
+ALTER TABLE author ADD COLUMN image VARCHAR (255); 
+UPDATE author SET image = 'https://www.studiarapido.it/wp-content/uploads/2015/02/manzoni.jpg' where id = 1;
+UPDATE author SET image = 'https://biografieonline.it/img/bio/u/Ugo_Foscolo.jpg' where id = 2;
+UPDATE author SET image = 'http://www.eleganzadelgusto.com/wordpress/wp-content/uploads/2014/07/Capponcina-dAnnunzio-2.jpg' where id = 3;
+UPDATE author SET image = 'https://matera.gocity.it/library/media/pascoli_giovanni_poeta.jpg' where id = 4;
+UPDATE author SET image = 'https://upload.wikimedia.org/wikipedia/commons/1/17/Luigi_Pirandello_1932.jpg' where id = 5;
+UPDATE author SET image = 'http://www.parlandosparlando.com/wp-content/uploads/2017/01/Giuseppe-Ungaretti.jpg' where id = 6;
+UPDATE author SET image = 'https://isasposa.files.wordpress.com/2012/06/alda-merini1.jpg' where id = 7;
+UPDATE author SET image = 'https://langhe.net/wp-content/uploads/2013/12/Cesare-Pavese1.jpg' where id = 8;
+UPDATE author SET image = 'https://pad.mymovies.it/cinemanews/2017/139841/1.jpg' where id = 9;
+UPDATE author SET image = 'http://cdn.quotationof.com/images/italo-calvino-1.jpg' where id = 10;
+UPDATE author SET image = 'http://yalebooksnetwork.org/yupblog/wp-content/uploads/sites/4/2014/01/primo-levi-berel-lang-featured.jpg' where id = 11;
+UPDATE author SET image = 'http://www.treccani.it/export/sites/default/Portale/resources/images/i_classici_italiani/Montale/01.jpg' where id = 12;
 
 -- event
 DROP TABLE IF EXISTS event;
