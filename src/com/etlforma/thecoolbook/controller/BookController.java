@@ -3,6 +3,8 @@ package com.etlforma.thecoolbook.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.etlforma.thecoolbook.model.Book;
@@ -40,13 +41,24 @@ public class BookController {
 		return "book_create";
 	}
 	
+	
+	
+	
+	
+	
 	//delete
 	@RequestMapping(value = "/book/read", method = RequestMethod.POST)
-	public String deleteBook(@ModelAttribute Book book, @PathVariable Integer id) {
-		book.setId(id);
+	public String deleteBook(@PathParam("id-input") Integer id) {
+		System.out.println(id);
+		Book book = bookDao.get(id);
 		bookDao.delete(book.getId());
 		return "book_read";
 	}
+	
+	
+	
+	
+	
 	
 	@RequestMapping(value = "/book/create", method = RequestMethod.GET)
 	public ModelAndView createBook(ModelAndView model, Book book) {

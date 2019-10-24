@@ -31,9 +31,9 @@
 	<td>${book.getGenre()}</td>
 	<td>${book.getIsbn()}</td>
 	<td>
-		<form action="read.html" method="post">
-			<input type="text" value="${book.getId()}" style="display:none;"/>
-			<input type="submit" />
+		<form action="read" method="post">
+			<!-- style="display:none;" -->
+			<input type="submit" class="form-control" name="id-input" id="id-input" value="${book.getId()}" />
 		</form>
 	</td>
 	</tr>  
