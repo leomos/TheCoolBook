@@ -1,6 +1,12 @@
--- user
+-- table dropping
+DROP TABLE IF EXISTS event_book;
+DROP TABLE IF EXISTS author_book;
 DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS event;
+DROP TABLE IF EXISTS book;
+DROP TABLE IF EXISTS author;
 
+-- user creation
 CREATE TABLE user (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	email VARCHAR(255) NOT NULL,
@@ -10,6 +16,7 @@ CREATE TABLE user (
 	is_admin BOOLEAN NOT NULL DEFAULT false
 );
 
+-- insertion of users
 INSERT INTO user(email, password, first_name, last_name, is_admin) VALUES (
 	'leonardo.mosciatti@gmail.com',
 	'leonardo',
@@ -17,10 +24,7 @@ INSERT INTO user(email, password, first_name, last_name, is_admin) VALUES (
 	'Mosciatti',
 	true
 );
-
--- book
-DROP TABLE IF EXISTS book;
-
+-- book creation
 CREATE TABLE book (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -66,9 +70,29 @@ INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
     '033789a45234b',
     'https://bookcover4u.com/pro/Educational-book-cover-design-P1484804032EDB-Java-web-design-internet-business-java.jpg'
 );
--- author
-DROP TABLE IF EXISTS author;
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'Io, Rocco',
+    '190',
+    'Horror',
+    '1244414234636',
+    'https://img.frasicelebri.it/images/thumb_book-io-rocco.330x330_q95.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'okToDelete',
+    '100',
+    'Temporal',
+    '0123333789abc', 
+    'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
+);
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'okToDelete',
+    '100',
+    'Temporal',
+    '0123333789abc', 
+    'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
+);
 
+-- author
 CREATE TABLE author (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -175,8 +199,16 @@ UPDATE author SET image = 'http://cdn.quotationof.com/images/italo-calvino-1.jpg
 UPDATE author SET image = 'http://yalebooksnetwork.org/yupblog/wp-content/uploads/sites/4/2014/01/primo-levi-berel-lang-featured.jpg' where id = 11;
 UPDATE author SET image = 'http://www.treccani.it/export/sites/default/Portale/resources/images/i_classici_italiani/Montale/01.jpg' where id = 12;
 
+-- author_book table
+CREATE TABLE author_book (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     id_author INT REFERENCES author(id) ON DELETE SET NULL,
+     id_book INT REFERENCES book(id) ON DELETE SET NULL
+);
+
+  INSERT INTO author_book(id_author, id_book) VALUES (1,1);
+
 -- event
-DROP TABLE IF EXISTS event;
 
 CREATE TABLE event (
      id_event INT AUTO_INCREMENT PRIMARY KEY,
@@ -191,17 +223,12 @@ INSERT INTO event(event_name, event_location, event_date) VALUES (
 	'2019-10-25 12:00:00'
 );
 
--- eventauthor
-DROP TABLE IF EXISTS eventbook;
 
-CREATE TABLE eventbook (
+CREATE TABLE event_book (
      id_event INT NOT NULL,
      id_book INT NOT NULL,
      FOREIGN KEY (id_event) REFERENCES event(id_event),
      FOREIGN KEY (id_book) REFERENCES book(id)
 );
 
-INSERT INTO eventbook( id_event, id_book) VALUES (
-	1,
-    1
-);
+INSERT INTO event_book( id_event, id_book) VALUES (1,1);
