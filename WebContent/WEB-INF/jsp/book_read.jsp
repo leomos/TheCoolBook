@@ -19,6 +19,7 @@
       <th scope="col">Number of Pages</th>
       <th scope="col">Genre</th>
       <th scope="col">ISBN</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +30,12 @@
 	<td>${book.getNumPages()}</td>
 	<td>${book.getGenre()}</td>
 	<td>${book.getIsbn()}</td>
+	<td>
+		<form action="read.html" method="post">
+			<input type="text" value="${book.getId()}" style="display:none;"/>
+			<input type="submit" />
+		</form>
+	</td>
 	</tr>  
 	</c:forEach>
 	  
