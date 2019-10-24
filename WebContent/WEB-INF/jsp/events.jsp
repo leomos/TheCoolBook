@@ -53,7 +53,7 @@
 				<c:forEach items="${events}" var="event">
 				<tr>
 					<td><a
-						href="http://localhost:8085/thecoolbook/event/${event.getIdEvent()}.html">${event.getIdEvent()}</a></td>
+						href="/thecoolbook/event/${event.getIdEvent()}.html">${event.getIdEvent()}</a></td>
 					<td>${event.getEventName()}</td>
 					<td>${event.getEventLocation()}</td>
 					<td>${event.getEventDate()}</td>
@@ -61,7 +61,7 @@
 				
 				</table>
 				
-				   <a href="http://localhost:8085/thecoolbook/event/read">List of Events (link momentaneo)</a> 
+				   <a href="/thecoolbook/event/read">List of Events (link momentaneo)</a> 
 		</div>
 	</div>						
 	<script src="assets/js/jquery.min.js"></script>

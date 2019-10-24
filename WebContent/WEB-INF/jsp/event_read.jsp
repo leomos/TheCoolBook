@@ -19,7 +19,7 @@
 <body>
 	<nav class="navbar navbar-light navbar-expand-md">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="http://localhost:8085/thecoolbook/index.jsp">TheCoolBook</a>
+			<a class="navbar-brand" href="/thecoolbook/index.jsp">TheCoolBook</a>
 			<button data-toggle="collapse" class="navbar-toggler"
 				data-target="#navcol-1">
 				<span class="sr-only">Toggle navigation</span><span
@@ -28,11 +28,11 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav">
 					<li class="nav-item" role="presentation"><a
-						class="nav-link " href="http://localhost:8085/thecoolbook/authors.html">Authors</a></li>
+						class="nav-link " href="/thecoolbook/authors.html">Authors</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="http://localhost:8085/thecoolbook/books.html">Books</a></li>
+						href="/thecoolbook/books.html">Books</a></li>
 					<li class="nav-item active" role="presentation"><a class="nav-link"
-						href="http://localhost:8085/thecoolbook/events.html">Events</a></li>
+						href="/thecoolbook/events.html">Events</a></li>
 				</ul>
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 				<c:forEach items="${events}" var="event">
 				<tr>
 					<td><a
-						href="http://localhost:8085/thecoolbook/event/${event.getIdEvent()}.html">${event.getIdEvent()}</a></td>
+						href="/thecoolbook/event/${event.getIdEvent()}.html">${event.getIdEvent()}</a></td>
 					<td>${event.getEventName()}</td>
 					<td>${event.getEventDate()}</td>
 					<td>${event.getEventLocation()}</td>

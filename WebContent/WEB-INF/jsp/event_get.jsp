@@ -61,9 +61,11 @@
 					<td><a href="delete/${event.getIdEvent()}">Delete</a></td>
 			</table>
 
-
 		</div>
+		<h4>Books</h4>
 	</div>
+	
+	
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
