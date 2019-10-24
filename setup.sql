@@ -112,10 +112,13 @@ INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
     '0123333789abc', 
     'https://www.urbanremainschicago.com/pub/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/2/0/20110818-006m_2.jpg'
 );
-
-
-
-
+INSERT INTO book(title, num_pages, genre, isbn, URLimage) VALUES (
+	'SuperCow IV - Final Chapter',
+    '812000',
+    'Drama',
+    '1547845124011',
+    'https://fytees.com/images/products/24/24_d.jpg'
+);
 
 -- author
 DROP TABLE IF EXISTS author;
